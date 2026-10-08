@@ -24,13 +24,13 @@ repository               : "LiZhenggang1018/LiZhenggang1018.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "李正刚"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "手机影像领域软件工程师"
+  location         : "中国-上海"
+  employer         : "VIVO"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "lizhenggang1018@126.com" 
 
   # Academic websites
   academia         : # URL

@@ -6,59 +6,73 @@ author_profile: true
 redirect_from:
   - /resume
 ---
-
 {% include base_path %}
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+教育经历
+========
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* 2012.09-2017.06 浙江大学 光电科学与工程学院（直博）
+  * 研究方向：计算机视觉/软件算法/光学仿真算法/图像处理/光电传感/光电探测及成像
+  * 荣誉：2014曹光彪奖学金 2013舜宇奖学金 2012惯性奖学金
+* 2008.09-2012.06 华中科技大学 光电信息科学与工程学院（本科）
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+工作经历
+========
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+2025 To 至今：Vivo手机-影像预研规划部-影像系统开发专家
+2017 To 2025：Huawei终端-Camera算法与性能部-高级研发工程师
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+2024\~25 **两段式视频**框架（安卓+鸿蒙）
+
+两段式视频作为相机视频领域最大的软件创新架构，本人负责两段式视频核心框架，包括：
+
+1. 两段式任务处理基础框架的请求下发、暂停、恢复、查询、删除、监听、结果上报、异常处理的HIDL&HDI接口定义及HAL功能实现；
+2. 分段式视频任务调度、线程池管理、优先级分发、CPU负载均衡、同步异步执行、任务队列管理、亮屏打断、相机资源互斥、状态机更新、超时、温控、性能、内存、调试、维测、过期&系统升级文件清理机制。
+3. 基于native\_handle\_t实现fd跨进程传递、Selinux权限控制、fd创建、克隆、校验、下发、使用、异步回调资源释放；传递文件fd触发视频文件mp4 拆包、解码、算法处理、buffer轮转、编码、封包、生成MP4 fd上报。
+
+2025 AiRaw拍照算法结构化并发软件框架
+
+1. Airaw是拍照后处理中最重要的算法，基于C++20协程与NVIDIA stdexec并发库（C++26 std::execution）开发airaw多帧拍照融合算法的前处理子模块的结构化并发软件框架，将edof场景下多帧收集、解压、校验、参考帧选择、灰度化、配准、H矩阵传导、warp等前处理模块做并发，提升拍照算法性能10%。
+2. 基于protobuf/capnp优化算法&软件侧交互数据模型，保障数据一致性与版本演进能力。
+
+2024 图库编辑框架（安卓+鸿蒙）
+图库编辑框架是为图库编辑提供芯片级图像视频算法能力的软件框架，包括：
+
+1. 提供Livephoto重选封面帧编辑、图库+相机滤镜、大光圈编辑、矫正编辑、除雾编辑等特性。
+2. 主要涉及HDI/HIDL跨进程通信，共享内存&共享Fd、Selinux权限、客户端&服务端死亡监听、独立进程按需加载延时释放等技术点。
+
+2023 可变光圈智能切换算法（海思+高通平台）
+可变光圈作为Mate50/60系列Top1卖点，作为可变光圈智能切换算法负责人负责：
+
+1. 实现各场景的光圈智能切换，如：多人合影、文本、抓拍、运动降曝光、高像素、超夜、视频、多景深近距、鲜花、美食、宠物、flicker+屏幕banding场景、六边形太阳、专业拍照&视频、三方APK切换策略等；提升camera在进光量&解析力、景深&前后景清晰度、曝光优化&去运动模糊&去视频震颤、虚化、VA用户体验等领域竞争力。
+2. 起流前首帧光圈配置、决策、滤波、排序、决策、双阈值优化、极暗+抓拍热启动、模式切换+多摄切换热记忆、FlickerSensor提前上电、跌落保护、拍照帧互斥、屏显、exif。
+
+2022~21 3A（AF\AE\AWB）（高通）
+作为Mate50/P50&60系列3A软件总负责人+commiter，负责如下算法的软件集成方案：
+
+1. AF（AIAF、PP2PD、追焦、蓝天月亮场景对焦优化、抓拍AF、温漂补偿）
+2. AE（Deflicker、MotionAE、flash、LED flash）
+3. AWB（AIAWB、多光谱sensor、ColorSync、色卡检测）
+
+2020 夜景拍照、流光快门、畸变校正后处理软件，拍照选帧、丢帧、出帧特性负责人；（MTK）
+
+2019 人像拍照、美肤拍照、AIColor拍照后处理软件；（海思）
+
+1. 负责人像模式（美颜、AiColor）拍照后台YUV域单帧不变曝光后处理软件开发；
+2. 负责夜景&流光快门模式拍照前台RAW域多帧变曝光后处理软件开发；
+3. 负责普通拍照广角畸变矫正后处理软件开发；
+4. 负责shutterlag选帧、时间戳选帧、对比度选帧、抖动量选帧；固定丢帧、策略丢帧；各类组合出帧的需求梳理与特性开发；
+
+2018~17 ToF 3D小物体建模算法项目经理，光学仿真算法工程师
+主导P30基于ToF硬件的3D建模特性；参与Mate20基于结构光硬件的3D建模特性；
+
+专业技能
+========
+
+* 精通安卓相机拍照后处理软件（人像+夜景）、拍照算法结构化并发框架、两段式拍照+视频+Livephoto、AF&AE&AWB、可变光圈、面阵多光谱、图库编辑、图片视频编解码等相机领域软件业务流程。
+* 熟悉海思、高通、MTK相机HAL框架。熟悉安卓相机HAL及后处理算法软件、Linux、HIDL、IPC、Selinux。
+* 9年C++开发经验：精通C++11/14/17/部分20&26、模板、编译（mk+gn）、性能优化、ASAN、GTest。
+* 熟悉三方库：OpenCV、OpenCL、Nlohmann\_json、stdexec(C++26 std::execution)、jpeg\_turbo、media\_codec、capnp、C++序列化等。
+* 了解C/matlab/java/python等编程语言。
+* 了解计算机视觉、2D/3D成像硬件、算法建模、图像视频处理等领域专业知识。
+* 英语6级600+，熟练的英文文献读写与口语表达能力，丰富的海外供应商交流及合作立项等交付经验。

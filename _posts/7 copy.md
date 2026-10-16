@@ -34,9 +34,34 @@ std::vector<bool>里面的坑
 
 使用 alignas、alignof、sizeof、std::align 来检查和控制
 
+
+
+
+# 《Code\_You\_Didn't\_Write》
+
+新人如何读懂大工程代码。
+
+结论：
+
+面对大型、陌生、历史久远的代码库，不要试图把全部代码读完，而要建立可验证的理解路径：
+
+人是最重要的资源：多问、记录、完善新人入职文档和团队知识地图。
+
+接受"技术现实"：旧代码往往是当时约束下的最佳答案，不一定是简单的技术债。
+
+文档只记录"是什么"和部分"怎么做"：**"为什么"常常已经丢失**，只能从 git 历史、提交记录、设计模式和案例研究中拼凑。
+
+AI 是工具，不是答案：它能帮助解释、收集和驱动工具，但会自信地犯错，必须验证。
+
+最可靠的是运行行为：**让程序跑起来**，用断点、观察点、反向/时间旅行调试，从失败或边界出发，观察实际执行路径。
+
+意图脆弱，行为持久：代码可能撒谎，文档可能过时，但实际运行结果可以核对。
+
+一句话：别慌。借助团队、工具、AI 和调试器，从实际行为出发，你就能在百万行代码中找到方向。
+
 《Writing_Low_Latency_Cpp》
 
-```
+
 # 《Can_I_memcpy_This_Type_Across_a_Boundary》
 
 问题：
@@ -54,5 +79,4 @@ IPC/跨进程（进程运行在不同的软件环境：如Linux+Clang & MacOs+Cl
 
 开源地址：
 
-<https://github.com/ximicpp/XOffsetDatastructure>
-```
+[https://github.com/ximicpp/XOffsetDatastructure](https://github.com/ximicpp/XOffsetDatastructure)
